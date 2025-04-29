@@ -92,7 +92,7 @@ Target accuracy (≥ 0.75) not yet achieved.
 Results
 • The baseline NN correctly classifies 72 % of heldout samples.
 • Precision = 0.62, Recall = 0.11 ⇢ model skews toward the majority “notfunded” class.
-• Confusion matrix and ROC curve plots available in AlphabetSoupCharit.ipynb.
+• Confusion matrix and ROC curve plots available in AlphabetSoupCharity.ipynb.
 
  
 Optimisation Experiments
@@ -118,7 +118,7 @@ Best run reaches 76.2 % – clearing the requirement.
 
  
 Project Structure 
-├─ AlphabetSoupCharit.ipynb           # baseline build & eval
+├─ AlphabetSoupCharity.ipynb           # baseline build & eval
 ├─ AlphabetSoupCharity_Optimization.ipynb  # tuning experiments
 ├─ Starter_Code.ipynb                # clean template provided by course
 ├─ charity_data.csv                  # dataset (gitignored in public repo)
