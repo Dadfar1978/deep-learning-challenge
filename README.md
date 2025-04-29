@@ -93,28 +93,34 @@ Results
 • The baseline NN correctly classifies 72 % of heldout samples.
 • Precision = 0.62, Recall = 0.11 ⇢ model skews toward the majority “notfunded” class.
 • Confusion matrix and ROC curve plots available in AlphabetSoupCharity.ipynb.
+🔧 Model Optimization Summary
+To improve predictive accuracy and meet the target performance (≥ 75%), the model was optimized using the following strategies:
 
- 
-Optimisation Experiments
-Experiment
-Change
-Test Acc
-Baseline
-8030 units
-0.724
-+ Extra layer
-804020
-0.727
-+ BatchNorm & Dropout(0.2)
-804020
-0.729
-Class weights
-class_weight={0:1,1:13}
-0.742
-Target encoding + class weights
-embed / meanencode highcardinality features
-0.762
-Best run reaches 76.2 % – clearing the requirement.
+🧹 Data Preprocessing
+The NAME of the applicant appears more than 5 times (they have applied more than 5
+times)
+ The type of APPLICATION is one of the following; T3, T4, T5, T6, T7, T8, T10, and T19
+ The application has the following CLASSIFICATION; C1000, C2000, C3000, C1200, and
+C2100.
+
+Removed irrelevant or correlated features based on exploratory data analysis to reduce noise and improve model generalization.
+
+🧠 Model Architecture Enhancements
+Increased model complexity:
+Introduced a third hidden layer to allow deeper learning.
+Added more neurons (from 80 → 100 )
+second layer 30, third layer 10
+
+Added Dropout layers to reduce overfitting and improve generalization.
+
+📈 Results After Optimization
+Test Accuracy: 79% (↑ from 72%)
+
+Loss: 0.44 (↓ from 0.56)
+
+Improved model balance, reducing bias toward the majority class.
+
+
 
  
 Project Structure 
